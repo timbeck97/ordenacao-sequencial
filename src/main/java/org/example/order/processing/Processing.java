@@ -16,6 +16,7 @@ public class Processing  implements Runnable{
     @Override
     public void run() {
         System.out.println("Starting processing thread");
+        data.printName();
         data.orderArray();
     }
 

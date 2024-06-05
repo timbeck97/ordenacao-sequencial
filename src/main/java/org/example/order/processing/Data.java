@@ -16,7 +16,7 @@ public class Data {
     }
 
     public void orderArray(){
-        for (int j=0;j<1;j++){
+        for (int j=0;j<4;j++){
             Date now = new Date();
             for (int i = 1; i < size; i++) {
                 int[] array = generateRandomArray(i);
@@ -25,8 +25,8 @@ public class Data {
             Date finalDate = new Date();
             long totalTime = finalDate.getTime() - now.getTime();
             writeTime(totalTime);
-            String etapa=(j+1)+"/1";
-            System.out.println("FINISHED "+etapa+" - "+order.getName()+" "+totalTime+"ms");
+
+            System.out.println("FINISHED - "+order.getName()+" "+totalTime+"ms");
         }
     }
     public synchronized void writeTime(long time){
@@ -46,5 +46,8 @@ public class Data {
             array[i] = random.nextInt(40000);
         }
         return array;
+    }
+    public void printName(){
+        System.out.println(this.order.getName());
     }
 }

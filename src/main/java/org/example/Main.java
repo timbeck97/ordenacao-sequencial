@@ -1,6 +1,6 @@
 package org.example;
 
-import com.sun.scenario.effect.Merge;
+
 import org.example.order.Ordenation;
 import org.example.order.imp.*;
 import org.example.order.processing.*;
@@ -14,7 +14,7 @@ import java.util.concurrent.Executors;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        final int TOTAL_ARRAYS=30000;
+        final int TOTAL_ARRAYS=40000;
         List<Ordenation> ordenations = new ArrayList<>();
         ordenations.add(new BucketSort());
         ordenations.add(new CountingSort());
@@ -37,12 +37,5 @@ public class Main {
 
 
     }
-    public static int[] generateRandomArray(int size){
-        Random random = new Random();
-        int[] array = new int[size];
-        for (int i = 0; i < size; i++) {
-            array[i] = random.nextInt(40000);
-        }
-        return array;
-    }
+   
 }
